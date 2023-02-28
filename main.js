@@ -11,7 +11,7 @@
 
 function listAllItems(products) {
   //create result string
-  let result = "There ";
+  let result = "There";
   
   //check the number of items in array. 
   //0, no items return
@@ -20,11 +20,12 @@ function listAllItems(products) {
     
   //1 item. return addition to string
   }else if(products.length === 1){
-    return result + "is 1 item for sale: " + products[0].name + ".";
+    return `${result} is 1 item for sale: ${products[0].name}.`;
     
-  //2 items. hard code result + extra's  
+  //2 items. return sentence with vaiables
   }else if(products.length === 2){
-    return result + "are 2 items for sale: " + products[0].name + " and " + products[1].name + ".";
+    return `${result} are 2 items for sale: ${products[0].name} and ${products[1].name}.`
+
     
   //more than 2 items  
   }else{
@@ -33,14 +34,13 @@ function listAllItems(products) {
     let itemArray = [];
     for(let i = 0; i < products.length; i++){
       //using for loop, add item and push name into array
-      total ++;
+      total += 1;
       itemArray.push(products[i].name)
     };
     total.toString()
     
-    //add new variables to result
-    return result + "are " + total + " items for sale: " +  itemArray.join(', ') + "."
-
+    //return sentence with variables. join array with ", " in betwween each item
+    return `${result} are ${total} items for sale: ${itemArray.join(', ')}.`
   }
 }
 
