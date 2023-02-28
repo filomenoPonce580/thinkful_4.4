@@ -10,21 +10,18 @@
 */
 
 function listAllItems(products) {
-  //create result string
-  let result = "There";
-  
   //check the number of items in array. 
-  //0, no items return
+  //0, no items return message
   if(products.length < 1){
     return "There are no items for sale.";
     
-  //1 item. return addition to string
+  //1 item. return sentence with template literal addition
   }else if(products.length === 1){
-    return `${result} is 1 item for sale: ${products[0].name}.`;
+    return `There is 1 item for sale: ${products[0].name}.`;
     
-  //2 items. return sentence with vaiables
+  //2 items. return sentence with template literal vaiables
   }else if(products.length === 2){
-    return `${result} are 2 items for sale: ${products[0].name} and ${products[1].name}.`
+    return `There are 2 items for sale: ${products[0].name} and ${products[1].name}.`
 
     
   //more than 2 items  
@@ -39,8 +36,8 @@ function listAllItems(products) {
     };
     total.toString()
     
-    //return sentence with variables. join array with ", " in betwween each item
-    return `${result} are ${total} items for sale: ${itemArray.join(', ')}.`
+    //return sentence with variables. join array with ", " in between each item
+    return `There are ${total} items for sale: ${itemArray.join(', ')}.`
   }
 }
 
