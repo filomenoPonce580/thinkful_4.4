@@ -16,7 +16,7 @@ function listAllItems(products) {
   //check the number of items in array. 
   //0, no items return
   if(products.length < 1){
-    return "There are no items for sale";
+    return "There are no items for sale.";
     
   //1 item. return addition to string
   }else if(products.length === 1){
@@ -39,7 +39,7 @@ function listAllItems(products) {
     total.toString()
     
     //add new variables to result
-    return result + "are " total + " items for sale: " +  itemArray.join(', ') + "."
+    return result + "are " + total + " items for sale: " +  itemArray.join(', ') + "."
 
   }
 }
